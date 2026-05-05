@@ -23,7 +23,7 @@ make CFLAGS_EXTRA="-DQUANT_BITS=8 -DQUANT_DEBUG -DMX_BLOCK_SIZE=8" -j18
 
 ./train_quant --seed 101 --loss-type hinge \
               --model-variant w16_dx8_conv12conv24fc4 \
-              --epochs 1 --batch-size 256 --s-eta 13
+              --epochs 1 --batch-size 256 --s-eta 13 --log-interval 1
 ```
 
 Build-time flags:
