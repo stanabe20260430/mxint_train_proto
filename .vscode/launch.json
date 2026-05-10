@@ -2,7 +2,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Debug train_quant (W8/MX8)",
+            "name": "Debug train_quant (quant_bits8, block_size8)",
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceFolder}/train_quant",
@@ -12,13 +12,13 @@
             "environment": [],
             "MIMode": "gdb",
             "miDebuggerPath": "/usr/bin/gdb",
-            "preLaunchTask": "build train_quant (W8/MX8/debug)",
+            "preLaunchTask": "build train_quant (quant_bits8, block_size8/debug)",
             "setupCommands": [
                 { "text": "-enable-pretty-printing", "ignoreFailures": true }
             ]
         },
         {
-            "name": "Debug unit_test_pytorch (W8/MX8)",
+            "name": "Debug unit_test_pytorch (quant_bits8, block_size8)",
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceFolder}/unit_test_pytorch",
@@ -28,7 +28,7 @@
             "environment": [],
             "MIMode": "gdb",
             "miDebuggerPath": "/usr/bin/gdb",
-            "preLaunchTask": "build unit_test_pytorch (W8/MX8/debug)",
+            "preLaunchTask": "build unit_test_pytorch (quant_bits8, block_size8/debug)",
             "setupCommands": [
                 { "text": "-enable-pretty-printing", "ignoreFailures": true }
             ]
