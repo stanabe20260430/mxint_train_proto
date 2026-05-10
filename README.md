@@ -100,8 +100,7 @@ mxint_train_proto/
 │   ├── train_quant_setup.c  Weight initialisation + checkpoint save.
 │   ├── scale_stats.c        Per-block underflow/overflow CSV writer.
 │   ├── dump_state.c         Tensor snapshot format for reproducibility.
-│   ├── convert_checkpoint.c Standalone tool to convert fp32 checkpoints
-│                            to MXINT layout.
+│   ├── convert_checkpoint.c Standalone tool to convert block size of checkpoints.
 │   └── …                    Common I/O helpers.
 ├── test/pytorch/            Per-op regression tests against PyTorch
 │                            goldens. Reports error metrics (max_abs,
