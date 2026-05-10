@@ -112,9 +112,7 @@ mxint_train_proto/
 │                            full variant × seed × s-eta sweep with
 │                            scale-stats CSV output;
 │                            `run_quant_variant.sh <variant>` runs a
-│                            single variant. `summarize_test_acc.py`
-│                            and `summarize_underflow_acc.py` aggregate
-│                            sweep CSVs into per-variant tables.
+│                            single variant. 
 ├── README.md                This file.
 └── LICENSE                  Licensing terms.
 ```
