@@ -1,0 +1,36 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "clean",
+            "type": "shell",
+            "command": "make clean",
+            "problemMatcher": []
+        },
+        {
+            "label": "build train_quant (W8/MX8/debug)",
+            "type": "shell",
+            "command": "make clean && make CFLAGS_EXTRA=\"-g -O0 -DQUANT_BITS=8 -DQUANT_DEBUG -DMX_BLOCK_SIZE=8\" -j8 train_quant",
+            "group": { "kind": "build", "isDefault": true },
+            "problemMatcher": ["$gcc"]
+        },
+        {
+            "label": "build unit_test_pytorch (W8/MX8/debug)",
+            "type": "shell",
+            "command": "make clean && make CFLAGS_EXTRA=\"-g -O0 -DQUANT_BITS=8 -DQUANT_DEBUG -DMX_BLOCK_SIZE=8\" -j8 unit_test_pytorch",
+            "problemMatcher": ["$gcc"]
+        },
+        {
+            "label": "build convert_ckpt (debug)",
+            "type": "shell",
+            "command": "make clean && make CFLAGS_EXTRA=\"-g -O0\" -j8 convert_ckpt",
+            "problemMatcher": ["$gcc"]
+        },
+        {
+            "label": "test-pytorch (W8/MX8/debug)",
+            "type": "shell",
+            "command": "make clean && make CFLAGS_EXTRA=\"-g -O0 -DQUANT_BITS=8 -DQUANT_DEBUG -DMX_BLOCK_SIZE=8\" -j8 test-pytorch",
+            "problemMatcher": ["$gcc"]
+        }
+    ]
+}
