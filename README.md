@@ -108,11 +108,7 @@ mxint_train_proto/
 │                            mean_abs, max_rel, mean_rel); no pass/fail
 │                            threshold is encoded.
 ├── scripts/                 Shell and Python helpers for sweeping and
-│                            aggregation. `run_debug_sweep.sh` runs the
-│                            full variant × seed × s-eta sweep with
-│                            scale-stats CSV output;
-│                            `run_quant_variant.sh <variant>` runs a
-│                            single variant. 
+│                            aggregation. 
 ├── README.md                This file.
 └── LICENSE                  Licensing terms.
 ```
