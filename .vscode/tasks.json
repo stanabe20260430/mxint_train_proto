@@ -8,14 +8,14 @@
             "problemMatcher": []
         },
         {
-            "label": "build train_quant (quant_bits8, block_size8/debug)",
+            "label": "build train_quant",
             "type": "shell",
             "command": "make clean && make CFLAGS_EXTRA=\"-g -O0 -DQUANT_BITS=8 -DQUANT_DEBUG -DMX_BLOCK_SIZE=8\" -j8 train_quant",
             "group": { "kind": "build", "isDefault": true },
             "problemMatcher": ["$gcc"]
         },
         {
-            "label": "build unit_test_pytorch (quant_bits8, block_size8/debug)",
+            "label": "build unit_test_pytorch",
             "type": "shell",
             "command": "make clean && make CFLAGS_EXTRA=\"-g -O0 -DQUANT_BITS=8 -DQUANT_DEBUG -DMX_BLOCK_SIZE=8\" -j8 unit_test_pytorch",
             "problemMatcher": ["$gcc"]
@@ -27,7 +27,7 @@
             "problemMatcher": ["$gcc"]
         },
         {
-            "label": "test-pytorch (quant_bits8, block_size8/debug)",
+            "label": "test-pytorch",
             "type": "shell",
             "command": "make clean && make CFLAGS_EXTRA=\"-g -O0 -DQUANT_BITS=8 -DQUANT_DEBUG -DMX_BLOCK_SIZE=8\" -j8 test-pytorch",
             "problemMatcher": ["$gcc"]
