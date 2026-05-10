@@ -27,11 +27,10 @@ SRCS_HOST   = host/qconvert.c \
               host/mnist_loader.c \
               host/fp32_xavier.c \
               host/fp32_ref_alloc.c \
-              host/fp32_ref_softmax.c \
               host/fp32_loss_monitor.c
 
 SRCS_MODEL_FP32   = model/fp32/fp32_lenet.c
-SRCS_MODEL_QUANT  = model/quant/quant_lenet.c model/quant/quant_lenet_hinge.c model/quant/quant_lenet_w16_dx8_a2.c model/quant/quant_lenet_w16_dx8_convs2fc4.c model/quant/quant_lenet_w16_dx16_a16.c model/quant/quant_lenet_w8_dx8_a8.c model/quant/quant_lenet_w16_dx8_a8.c model/quant/quant_lenet_w16_dx8_a4.c model/quant/quant_lenet_w16_dx16_a16_softmax.c model/quant/quant_lenet_w8_dx8_a8_softmax.c model/quant/quant_lenet_w16_dx8_a8_softmax.c model/quant/quant_lenet_w16_dx8_a4_softmax.c model/quant/quant_lenet_w16_dx8_a2_softmax.c model/quant/quant_lenet_w16_dx8_convs2fc4_softmax.c model/quant/quant_lenet_w16_dx8_convs2ip14tip28.c model/quant/quant_lenet_w16_dx8_convs2ip14tip28_softmax.c model/quant/quant_lenet_w16_dx8_conv12conv24fc4.c model/quant/quant_lenet_w16_dx8_conv12conv24fc4_softmax.c model/quant/quant_lenet_w16_dx4_a4.c model/quant/quant_lenet_w16_dx4_a4_softmax.c model/quant/quant_lenet_w16_dx4_convs2fc4.c model/quant/quant_lenet_w16_dx4_convs2fc4_softmax.c model/quant/quant_lenet_fp32softmax.c
+SRCS_MODEL_QUANT  = model/quant/quant_lenet.c model/quant/quant_lenet_hinge.c model/quant/quant_lenet_w16_dx8_a2.c model/quant/quant_lenet_w16_dx8_convs2fc4.c model/quant/quant_lenet_w16_dx16_a16.c model/quant/quant_lenet_w8_dx8_a8.c model/quant/quant_lenet_w16_dx8_a8.c model/quant/quant_lenet_w16_dx8_a4.c model/quant/quant_lenet_w16_dx16_a16_softmax.c model/quant/quant_lenet_w8_dx8_a8_softmax.c model/quant/quant_lenet_w16_dx8_a8_softmax.c model/quant/quant_lenet_w16_dx8_a4_softmax.c model/quant/quant_lenet_w16_dx8_a2_softmax.c model/quant/quant_lenet_w16_dx8_convs2fc4_softmax.c model/quant/quant_lenet_w16_dx8_convs2ip14tip28.c model/quant/quant_lenet_w16_dx8_convs2ip14tip28_softmax.c model/quant/quant_lenet_w16_dx8_conv12conv24fc4.c model/quant/quant_lenet_w16_dx8_conv12conv24fc4_softmax.c model/quant/quant_lenet_w16_dx4_a4.c model/quant/quant_lenet_w16_dx4_a4_softmax.c model/quant/quant_lenet_w16_dx4_convs2fc4.c model/quant/quant_lenet_w16_dx4_convs2fc4_softmax.c
 
 SRCS_TEST_EXTRA = train/model_io_quant.c \
                   train/train_common.c train/train_eval.c train/train_options.c \
@@ -52,7 +51,7 @@ SRCS_TEST_PYTORCH = test/pytorch/unit_test.c \
                     test/pytorch/load_golden.c
 OBJS_TEST_PYTORCH = $(SRCS_TEST_PYTORCH:.c=.o)
 
-SRCS_TRAIN_QUANT = train/train_common.c train/train_eval.c train/model_io_quant.c train/binio.c train/train_options.c train/scale_stats.c train/dump_state.c train/dump_raw.c train/train_quant.c train/train_quant_args.c train/train_quant_eval.c train/train_quant_setup.c
+SRCS_TRAIN_QUANT = train/train_common.c train/train_eval.c train/model_io_quant.c train/binio.c train/train_options.c train/scale_stats.c train/dump_state.c train/dump_raw.c train/train_quant.c train/train_quant_args.c train/train_quant_eval.c train/train_quant_setup.c train/quant_lenet_ops_table.c train/train_quant_step.c
 OBJS_TRAIN_QUANT = $(SRCS_TRAIN_QUANT:.c=.o)
 
 SRCS_CONVERT = train/convert_checkpoint.c train/binio.c

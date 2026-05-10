@@ -21,7 +21,7 @@ Training takes fp32 MNIST IDX files in `./data/`.
 cd mxint_train_proto
 make CFLAGS_EXTRA="-DQUANT_BITS=8 -DQUANT_DEBUG -DMX_BLOCK_SIZE=8" -j18
 
-./train_quant --seed 101 --loss-type hinge \
+./train_quant --seed 101 \
               --model-variant w16_dx8_conv12conv24fc4 \
               --epochs 1 --batch-size 256 --s-eta 13 --log-interval 1
 ```
@@ -38,7 +38,6 @@ Build-time flags:
 
 Runtime flags of interest:
 
-- `--loss-type {hinge,softmax}` — Weston–Watkins hinge or base-2 softmax+CE.
 - `--model-variant <n>` — picks a per-tensor bit-width layout. The 18
   supported names are listed below. All variants require the
   `QUANT_BITS=8` build. Each hinge variant has a matching `_softmax` twin
