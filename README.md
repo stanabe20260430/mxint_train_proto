@@ -1,6 +1,6 @@
 # mxint_train_proto
 
-MXINT block-floating-point training prototype in C. LeNet on MNIST, VGG7 /
+MXINT only integer training prototype in C. LeNet on MNIST, VGG7 /
 ResNet9 / ResNet18 / Tiny-ViT on CIFAR-10.
 
 ## Local runs (`run_*.sh`)
