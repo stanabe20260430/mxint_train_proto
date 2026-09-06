@@ -102,20 +102,7 @@ SRCS_TRAIN_QUANT_TV = train/train_quant_tiny_vit.c train/train_quant_tiny_vit_ar
                       train/train_quant_tiny_vit_eval.c \
                       train/model_io_quant_tiny_vit.c
 
-SRCS_MODEL_QUANT_VGG7 = model/quant/quant_vgg7.c model/quant/quant_vgg7_pinned.c configs/vgg7/pins/table.c \
-                        \
-                        \
-                        \
-                        \
-                        \
-                        \
-                        \
-                        \
-                        \
-                        \
-                        \
-                        \
-                        \
+SRCS_MODEL_QUANT_VGG7 = model/quant/quant_vgg7.c model/quant/quant_vgg7_pinned.c configs/vgg7/pins/table.c
                        
 SRCS_TRAIN_QUANT_VGG7 = train/train_common_vgg7.c train/train_eval.c \
                         train/train_options.c train/train_quant_vgg7_setup.c \
